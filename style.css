@@ -1,0 +1,156 @@
+:root {
+    --bg-light: #f1f5f9;
+    --panel-bg: #ffffff;
+    --text-dark: #1e293b;
+    --stroke-dark: #1e293b;
+    --pop-yellow: #ffde59;
+    --pop-blue: #bde0fe;
+    
+    /* Warna Mode */
+    --focus-bg: #ff477e;     /* Merah/Pink untuk Fokus */
+    --break-bg: #06d6a0;     /* Hijau untuk Istirahat */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-container {
+    background-color: var(--panel-bg);
+    padding: 30px;
+    border-radius: 24px;
+    border: 3px solid var(--stroke-dark);
+    box-shadow: 8px 8px 0px var(--stroke-dark);
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+}
+
+.app-header h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.app-header p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* --- TOMBOL SAKLAR MODE --- */
+.mode-switch {
+    display: flex;
+    gap: 8px;
+    background-color: #f1f5f9;
+    padding: 6px;
+    border-radius: 12px;
+    border: 2px solid var(--stroke-dark);
+    margin-bottom: 20px;
+}
+
+.btn-mode {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border-radius: 8px;
+    cursor: pointer;
+    background: transparent;
+    color: #64748b;
+    transition: all 0.2s ease;
+}
+
+.btn-mode.active {
+    background-color: #ffffff;
+    color: var(--text-dark);
+    border: 2px solid var(--stroke-dark);
+    box-shadow: 2px 2px 0px var(--stroke-dark);
+}
+
+/* --- DISPLAY TIMING BOX --- */
+.timer-display-box {
+    background-color: var(--focus-bg);
+    border: 3px solid var(--stroke-dark);
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 5px 5px 0px var(--stroke-dark);
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.status-badge {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 2px solid var(--stroke-dark);
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 0px var(--stroke-dark);
+}
+
+.time-text {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 3px 3px 0px var(--stroke-dark);
+    letter-spacing: 2px;
+}
+
+/* --- TOMBOL KONTROL --- */
+.control-section {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-pop {
+    border: 2px solid var(--stroke-dark);
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--stroke-dark);
+    transition: all 0.1s ease;
+}
+
+.btn-start { background-color: var(--pop-yellow); }
+.btn-pause { background-color: var(--pop-blue); }
+.btn-reset { background-color: #e2e8f0; }
+
+.btn-pop:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--stroke-dark);
+}
+
+/* --- FOOTER SESI --- */
+.session-counter {
+    border-top: 2px dashed #cbd5e1;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+}
+
+.hidden {
+    display: none !important;
+}
