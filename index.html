@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Study Timer ⏳✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>⏳ POMODORO TIMER</h1>
+            <p>Kelola waktu belajarmu dengan teknik Pomodoro. Fokus 25 menit, istirahat 5 menit!</p>
+        </header>
+
+        <!-- Pilihan Mode Waktu -->
+        <div class="mode-switch">
+            <button id="btn-mode-fokus" class="btn-mode active">Fokus Belajar (25m)</button>
+            <button id="btn-mode-istirahat" class="btn-mode">Istirahat (5m)</button>
+        </div>
+
+        <!-- Display Jam Hitung Mundur -->
+        <section class="timer-display-box" id="timer-box">
+            <div class="status-badge" id="status-label">MODE FOKUS 🎯</div>
+            <div class="time-text" id="time-display">25:00</div>
+        </section>
+
+        <!-- Tombol Kontrol Utama -->
+        <section class="control-section">
+            <button id="btn-start" class="btn-pop btn-start">Mulai 🚀</button>
+            <button id="btn-pause" class="btn-pop btn-pause hidden">Jeda ⏸️</button>
+            <button id="btn-reset" class="btn-pop btn-reset">Reset 🔄</button>
+        </section>
+
+        <!-- Counter Sesi Selesai -->
+        <footer class="session-counter">
+            <p>Sesi Fokus Selesai Hari Ini: <strong id="session-count">0</strong> 🏆</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
